@@ -9,10 +9,6 @@ public class Score2 {
         this.p2point = p2point;
     }
 
-    public int getP1point() {
-        return p1point;
-    }
-
     public Score2 player1Scores() {
         this.p1point++;
         return this;
@@ -24,9 +20,10 @@ public class Score2 {
     }
 
     public String getScore(){
-        return "Deuce";
+        return "NoStateObject";
     }
 
+    public int getP1point() { return p1point; }
     public int getP2point() {
         return p2point;
     }

@@ -4,6 +4,7 @@ public class TennisGame2 implements TennisGame
 {
     private Score2 score = new Equals(0,0);
     private String player1Name;
+
     TennisGame2(String player1Name) {
         this.player1Name = player1Name;
     }

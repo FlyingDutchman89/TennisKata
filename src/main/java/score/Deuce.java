@@ -17,4 +17,9 @@ public class Deuce extends Score2 {
         super.player2Scores();
         return new Advantage(getP1point(), getP2point());
     }
+
+    @Override
+    public String getScore() {
+        return "Deuce";
+    }
 }
