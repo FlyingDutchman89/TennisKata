@@ -17,6 +17,11 @@ public class Regular extends Score2 {
         return decideNextState();
     }
 
+    @Override
+    public String getScore() {
+        return convertScore(getP1point()) + "-" + convertScore(getP2point());
+    }
+
     private Score2 decideNextState() {
         if (isDeuce()) {
             return new Deuce(getP1point(), getP2point());
@@ -43,5 +48,17 @@ public class Regular extends Score2 {
 
     private boolean isEqualScore() {
         return getP1point() == getP2point();
+    }
+
+    private String convertScore(int point) {
+        if (point==0)
+            return "Love";
+        if (point==1)
+            return "Fifteen";
+        if (point==2)
+            return "Thirty";
+        if (point==3)
+            return "Forty";
+        return "";
     }
 }

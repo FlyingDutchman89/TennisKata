@@ -1,8 +1,4 @@
-import score.Advantage;
-import score.Deuce;
-import score.Equals;
-import score.Score2;
-import score.Win;
+import score.*;
 
 public class TennisGame2 implements TennisGame
 {
@@ -20,33 +16,6 @@ public class TennisGame2 implements TennisGame
     }
 
     public String getScore(){
-    	if (score instanceof Deuce)
-    		return score.getScore();
-        if (score instanceof Equals)
-			return convertScore(score.getP1point()) + "-All";
-        if(score instanceof Win){
-        	return score.getScore();
-		}
-        if (score instanceof Advantage){
-        	return score.getScore();
-		}
-        return convertScore(score.getP1point()) + "-" + convertScore(score.getP2point());
+    	return score.getScore();
     }
-
-	private boolean isEqualScore() {
-		return score.getP1point() == score.getP2point();
-	}
-
-	private String convertScore(int point) {
-		if (point==0)
-		    return "Love";
-		if (point==1)
-		    return "Fifteen";
-		if (point==2)
-		    return "Thirty";
-		if (point==3)
-			return "Forty";
-		return "";
-	}
-    
 }
