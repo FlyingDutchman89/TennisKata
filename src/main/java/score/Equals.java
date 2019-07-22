@@ -28,14 +28,4 @@ public class Equals extends Score2 {
         }
         return this;
     }
-
-    private boolean isRegular() {
-        return getP1point() != getP2point() && Math.max(getP1point(),getP2point())<=3;
-    }
-
-
-
-    private boolean isEqualScore() {
-        return getP1point() == getP2point();
-    }
 }

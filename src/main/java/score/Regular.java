@@ -26,10 +26,7 @@ public class Regular extends Score2 {
         if (isDeuce()) {
             return new Deuce(getP1point(), getP2point());
         }
-        if (isWinPlayer(getP1point(), getP2point())){
-            return new Win(getP1point(), getP2point());
-        }
-        if (isWinPlayer(getP2point(), getP1point())){
+        if (isWinPlayer()){
             return new Win(getP1point(), getP2point());
         }
         if (isEqualScore()){
@@ -37,17 +34,4 @@ public class Regular extends Score2 {
         }
         return this;
     }
-
-    private boolean isWinPlayer(int p1point, int p2point) {
-        return p1point>=4 && Math.abs(p1point-p2point)>=2;
-    }
-
-    private boolean isDeuce() {
-        return isEqualScore() && getP1point()>=3;
-    }
-
-    private boolean isEqualScore() {
-        return getP1point() == getP2point();
-    }
-
 }

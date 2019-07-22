@@ -40,4 +40,21 @@ public class Score2 {
         return "";
     }
 
+    protected boolean isEqualScore() { return getP1point() == getP2point();
+    }
+    protected boolean isRegular() {
+        return getP1point() != getP2point() && Math.max(getP1point(),getP2point())<=3;
+    }
+
+    protected boolean isDeuce() {
+        return isEqualScore() && getP1point()>=3;
+    }
+
+    protected boolean isWinPlayer() {
+        return Math.max(getP1point(),getP2point())>=4 && Math.abs(getP1point()-getP2point())>=2;
+    }
+
+
+
+
 }
