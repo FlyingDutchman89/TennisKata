@@ -33,17 +33,7 @@ public class Equals extends Score2 {
         return getP1point() != getP2point() && Math.max(getP1point(),getP2point())<=3;
     }
 
-    private String convertScore(int point) {
-        if (point == 0)
-            return "Love";
-        if (point == 1)
-            return "Fifteen";
-        if (point == 2)
-            return "Thirty";
-        if (point == 3)
-            return "Forty";
-        return "";
-    }
+
 
     private boolean isEqualScore() {
         return getP1point() == getP2point();

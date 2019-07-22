@@ -50,15 +50,4 @@ public class Regular extends Score2 {
         return getP1point() == getP2point();
     }
 
-    private String convertScore(int point) {
-        if (point==0)
-            return "Love";
-        if (point==1)
-            return "Fifteen";
-        if (point==2)
-            return "Thirty";
-        if (point==3)
-            return "Forty";
-        return "";
-    }
 }

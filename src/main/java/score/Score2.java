@@ -28,4 +28,16 @@ public class Score2 {
         return p2point;
     }
 
+    protected String convertScore(int point) {
+        if (point == 0)
+            return "Love";
+        if (point == 1)
+            return "Fifteen";
+        if (point == 2)
+            return "Thirty";
+        if (point == 3)
+            return "Forty";
+        return "";
+    }
+
 }
