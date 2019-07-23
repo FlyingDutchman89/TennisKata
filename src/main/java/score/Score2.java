@@ -40,9 +40,6 @@ public abstract class Score2 {
 
     protected boolean isEqualScore() { return getP1point() == getP2point();
     }
-    protected boolean isRegular() {
-        return getP1point() != getP2point() && Math.max(getP1point(),getP2point())<=3;
-    }
 
     protected boolean isDeuce() {
         return isEqualScore() && getP1point()>=3;
