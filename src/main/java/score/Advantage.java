@@ -17,17 +17,17 @@ public class Advantage extends Score2 {
         return decideNextState();
     }
 
-    private Score2 decideNextState() {
-        if (isWinPlayer()) {
-            return new Win(getP1point(), getP2point());
-        }
-        return new Deuce(getP1point(), getP2point());
-    }
-
     @Override
     public String getScore() {
         if (getP1point() > getP2point())
             return "Advantage player1";
         return "Advantage player2";
+    }
+
+    private Score2 decideNextState() {
+        if (isWinPlayer()) {
+            return new Win(getP1point(), getP2point());
+        }
+        return new Deuce(getP1point(), getP2point());
     }
 }
