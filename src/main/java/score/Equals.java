@@ -23,9 +23,6 @@ public class Equals extends Score2 {
     }
 
     private Score2 decideNextState() {
-        if (isRegular()) {
-            return new Regular(getP1point(), getP2point());
-        }
-        return this;
+        return new Regular(getP1point(), getP2point());
     }
 }
