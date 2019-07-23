@@ -6,25 +6,14 @@ public class Advantage extends Score2 {
     }
 
     @Override
-    public Score2 player1Scores() {
-        super.player1Scores();
-        return decideNextState();
-    }
-
-    @Override
-    public Score2 player2Scores() {
-        super.player2Scores();
-        return decideNextState();
-    }
-
-    @Override
     public String getScore() {
         if (getP1point() > getP2point())
             return "Advantage player1";
         return "Advantage player2";
     }
 
-    private Score2 decideNextState() {
+    @Override
+    protected Score2 decideNextState() {
         if (isWinPlayer()) {
             return new Win(getP1point(), getP2point());
         }

@@ -7,23 +7,12 @@ public class Deuce extends Score2 {
     }
 
     @Override
-    public Score2 player1Scores() {
-        super.player1Scores();
-        return decideNextState();
-    }
-
-    @Override
-    public Score2 player2Scores() {
-        super.player2Scores();
-        return decideNextState();
-    }
-
-    @Override
     public String getScore() {
         return "Deuce";
     }
 
-    private Score2 decideNextState(){
+    @Override
+    protected Score2 decideNextState(){
         return new Advantage(getP1point(), getP2point());
     }
 }

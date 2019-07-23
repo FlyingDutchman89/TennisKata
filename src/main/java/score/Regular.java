@@ -6,23 +6,12 @@ public class Regular extends Score2 {
     }
 
     @Override
-    public Score2 player1Scores() {
-        super.player1Scores();
-        return decideNextState();
-    }
-
-    @Override
-    public Score2 player2Scores() {
-        super.player2Scores();
-        return decideNextState();
-    }
-
-    @Override
     public String getScore() {
         return convertScore(getP1point()) + "-" + convertScore(getP2point());
     }
 
-    private Score2 decideNextState() {
+    @Override
+    protected Score2 decideNextState() {
         if (isDeuce()) {
             return new Deuce(getP1point(), getP2point());
         }

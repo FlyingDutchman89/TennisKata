@@ -11,20 +11,20 @@ public abstract class Score2 {
 
     public Score2 player1Scores() {
         this.p1point++;
-        return this;
+        return decideNextState();
     }
 
     public Score2 player2Scores() {
         this.p2point++;
-        return this;
+        return decideNextState();
     }
 
     public abstract String getScore();
 
+    protected abstract Score2 decideNextState();
+
     public int getP1point() { return p1point; }
-    public int getP2point() {
-        return p2point;
-    }
+    public int getP2point() { return p2point; }
 
     protected String convertScore(int point) {
         if (point == 0)

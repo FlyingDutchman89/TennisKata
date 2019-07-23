@@ -12,4 +12,7 @@ public class Win extends Score2 {
         return "Win for player2";
     }
 
+    @Override
+    protected Score2 decideNextState(){return this;}
+
 }

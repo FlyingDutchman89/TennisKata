@@ -6,23 +6,12 @@ public class Equals extends Score2 {
     }
 
     @Override
-    public Score2 player1Scores() {
-        super.player1Scores();
-        return decideNextState();
-    }
-
-    @Override
-    public Score2 player2Scores() {
-        super.player2Scores();
-        return decideNextState();
-    }
-
-    @Override
     public String getScore() {
         return convertScore(getP1point()) + "-All";
     }
 
-    private Score2 decideNextState() {
+    @Override
+    public Score2 decideNextState() {
         return new Regular(getP1point(), getP2point());
     }
 }
