@@ -1,6 +1,6 @@
 package score;
 
-public class Score2 {
+public abstract class Score2 {
     private int p1point;
     private int p2point;
 
@@ -19,9 +19,7 @@ public class Score2 {
         return this;
     }
 
-    public String getScore(){
-        return "NoStateObject";
-    }
+    public abstract String getScore();
 
     public int getP1point() { return p1point; }
     public int getP2point() {
@@ -53,8 +51,4 @@ public class Score2 {
     protected boolean isWinPlayer() {
         return Math.max(getP1point(),getP2point())>=4 && Math.abs(getP1point()-getP2point())>=2;
     }
-
-
-
-
 }
